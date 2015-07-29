@@ -17,6 +17,4 @@
 
     <access origin="*" />
 
-    <plugin name="https://github.com/eclipsesource/tabris-maps-plugin" />
-
 </widget>
