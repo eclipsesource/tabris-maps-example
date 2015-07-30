@@ -1,12 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget
-    id="com.eclipsesource.tabris.maps.example"
-    android-packageName="com.eclipsesource.tabris.maps.example"
-    version="0.0.1"
-    android-versionCode="1"
-    xmlns="http://www.w3.org/ns/widgets"
-    xmlns:cdv="http://cordova.apache.org/ns/1.0">
-
+<widget android-packageName="com.eclipsesource.tabris.maps.example" android-versionCode="1" id="com.eclipsesource.tabris.maps.example" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Tabris Maps Example</name>
     <description>
         Example for the Tabris maps custom widget.
@@ -14,9 +7,9 @@
     <author>
         EclipseSource
     </author>
-
     <access origin="*" />
-
-    <preference name="EnableDeveloperConsole" value="true"/>
-
+    <preference name="EnableDeveloperConsole" value="true" />
+    <plugin name="com.eclipsesource.tabris.maps" spec="../tabris-maps">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDJ4DJciLzPdpZnJH6CeGoduaKhzfPN-1I" />
+    </plugin>
 </widget>
