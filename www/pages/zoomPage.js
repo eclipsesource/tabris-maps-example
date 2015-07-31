@@ -4,7 +4,7 @@ var MAX_ZOOM_VALUE = 21;
 exports.create = function() {
 
   var page = tabris.create("Page", {
-    title: "zoom",
+    title: "property: zoom",
     topLevel: true
   });
 

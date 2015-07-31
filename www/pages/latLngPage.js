@@ -1,7 +1,7 @@
 exports.create = function() {
 
   var page = tabris.create("Page", {
-    title: "latLng",
+    title: "property: latLng",
     topLevel: true
   });
 

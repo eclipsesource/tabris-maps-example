@@ -3,6 +3,11 @@ tabris.registerWidget("Map", {
   _initProperties: {
     liteMode: false
   },
+  _events: {
+    mapTap: {
+      trigger: function(event) {this.trigger("mapTap", this, event.latLng);}
+    }
+  },
   _properties: {
     liteMode: "boolean",
     latLng: "array",
