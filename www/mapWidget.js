@@ -6,6 +6,9 @@ tabris.registerWidget("Map", {
   _events: {
     mapTap: {
       trigger: function(event) {this.trigger("mapTap", this, event.latLng);}
+    },
+    mapLongpress: {
+      trigger: function(event) {this.trigger("mapLongpress", this, event.latLng);}
     }
   },
   _properties: {
