@@ -5,6 +5,19 @@ exports.create = function() {
     topLevel: true
   });
 
+  tabris.create("Button", {
+    text: "Create Example",
+    layoutData: {centerX: 0, centerY: 0}
+  }).on("select", function() {
+    createExample(page);
+    this.set("visible", false);
+  }).appendTo(page);
+
+  return page;
+
+};
+
+function createExample(page) {
   var map = tabris.create("Map", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).appendTo(page);
@@ -24,7 +37,4 @@ exports.create = function() {
     map.set("latLng", [-33.867, 151.206]);
     map.set("zoom", 13);
   }).appendTo(page);
-
-  return page;
-
-};
+}
