@@ -1,14 +1,15 @@
 tabris.registerWidget("Map", {
   _type: "com.eclipsesource.tabris.maps.map",
-  _initProperties: {
-    liteMode: false
-  },
+  _initProperties: {liteMode: false},
   _events: {
     mapTap: {
       trigger: function(event) {this.trigger("mapTap", this, event.latLng);}
     },
     mapLongpress: {
       trigger: function(event) {this.trigger("mapLongpress", this, event.latLng);}
+    },
+    mapReady: {
+      trigger: function() {this.trigger("mapReady", this);}
     }
   },
   _properties: {

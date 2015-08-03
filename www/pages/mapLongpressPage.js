@@ -19,11 +19,13 @@ function createExample(page) {
 
   var map = tabris.create("Map", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
-  }).on("mapLongpress", function(widget, latLng) {
-    var text = "<b>Map long press position:</b><br/>" +
-                "<b>Latitude:</b> " + latLng[0] + "<br/>" +
-                "<b>Longitude:</b> " + latLng[1];
-    tapEventDisplay.set("text", text);
+  }).on("mapReady", function() {
+    this.on("mapLongpress", function(widget, latLng) {
+      var text = "<b>Map long press position:</b><br/>" +
+                  "<b>Latitude:</b> " + latLng[0] + "<br/>" +
+                  "<b>Longitude:</b> " + latLng[1];
+      tapEventDisplay.set("text", text);
+    });
   }).appendTo(page);
 
   var tapEventDisplay = tabris.create("TextView", {
