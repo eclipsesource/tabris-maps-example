@@ -33,9 +33,9 @@ tabris.registerWidget("Map", {
     });
   },
   getMinZoomLevel: function() {
-    this._nativeCall("getMinZoomLevel", {});
+    return this._nativeCall("getMinZoomLevel", {});
   },
   getMaxZoomLevel: function() {
-    this._nativeCall("getMaxZoomLevel", {});
+    return this._nativeCall("getMaxZoomLevel", {});
   }
 });
