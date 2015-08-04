@@ -14,7 +14,7 @@ tabris.registerWidget("Map", {
   },
   _properties: {
     liteMode: "boolean",
-    latLng: "array",
+    center: "array",
     zoom: "float",
     mapType: {type: ["choice", ["none", "hybrid", "normal", "satellite", "terrain"]]}
   },
