@@ -30,7 +30,7 @@ function createExample(page) {
 
   function updateMinMaxZoomLevel() {
     minMaxZoomLevel.set("text",
-      "Min zoom: <b>" + map.getMinZoomLevel() + "</b></br>" +
+      "Min zoom: <b>" + map.getMinZoomLevel() + "</b><br/>" +
       "Max zoom: <b>" + map.getMaxZoomLevel() + "</b>");
   }
 
