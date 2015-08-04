@@ -5,6 +5,7 @@ var zoomPage = require("./pages/zoomPage");
 var mapTapPage = require("./pages/mapTapPage");
 var mapLongpressPage = require("./pages/mapLongpressPage");
 var markerPage = require("./pages/markerPage");
+var pointGroupPage = require("./pages/pointGroupPage");
 var drawer = tabris.create("Drawer");
 
 tabris.create("PageSelector").appendTo(drawer);
@@ -14,3 +15,4 @@ zoomPage.create();
 mapTapPage.create();
 mapLongpressPage.create();
 markerPage.create();
+pointGroupPage.create();
