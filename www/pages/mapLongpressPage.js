@@ -11,9 +11,9 @@ function createExample(page) {
   }).on("mapReady", function() {
     this.set("center", [-33.867, 151.206]);
     this.on("mapLongpress", function(widget, latLng) {
-      var text = "<b>Map long press position:</b><br/>" +
-                  "<b>Latitude:</b> " + latLng[0] + "<br/>" +
-                  "<b>Longitude:</b> " + latLng[1];
+      var text = "Map long press position:<br/>" +
+        "Latitude: <b>" + latLng[0] + "</b><br/>" +
+        "Longitude: <b>" + latLng[1] + "</b>";
       tapEventDisplay.set("text", text);
     });
   }).appendTo(page);

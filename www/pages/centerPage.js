@@ -37,7 +37,9 @@ function createExample(page) {
     layoutData: {centerX: 0, top: [locationButtons, 10]}
   }).on("select", function() {
     var center = map.get("center");
-    centerPosition.set("text", "Center Position: lat <b>" + center[0] + "</b>, lng <b>" + center[1] + "</b>");
+    centerPosition.set("text", "Center position:<br/>" +
+      "Latitude: <b>" + center[0] + "</b><br/>" +
+      "Longitude: <b>" + center[1] + "</b>");
   }).appendTo(page);
 
   var centerPosition = tabris.create("TextView", {

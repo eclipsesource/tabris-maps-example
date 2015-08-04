@@ -29,7 +29,9 @@ function createExample(page) {
   }).appendTo(page);
 
   function updateMinMaxZoomLevel() {
-    minMaxZoomLevel.set("text", "min zoom: <b>" + map.getMinZoomLevel() + "</b> max zoom:<b>" + map.getMaxZoomLevel() + "</b>");
+    minMaxZoomLevel.set("text",
+      "Min zoom: <b>" + map.getMinZoomLevel() + "</b></br>" +
+      "Max zoom: <b>" + map.getMaxZoomLevel() + "</b>");
   }
 
   updateMinMaxZoomLevel();
