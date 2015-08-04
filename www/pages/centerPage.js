@@ -1,6 +1,6 @@
 exports.create = function() {
   return tabris.create("Page", {
-    title: "property: latLng",
+    title: "property: center",
     topLevel: true
   }).on("appear", createExample);
 };
