@@ -25,7 +25,9 @@ function createExample(page) {
 
   var minMaxZoomLevel = tabris.create("TextView", {
     layoutData: {centerX: 0, top: [page.children().last(), 10]},
-    markupEnabled: true
+    markupEnabled: true,
+    text: "Min zoom: <b>?</b><br/>" +
+      "Max zoom: <b>?</b>"
   }).appendTo(page);
 
   function updateMinMaxZoomLevel() {
@@ -34,5 +36,4 @@ function createExample(page) {
       "Max zoom: <b>" + map.getMaxZoomLevel() + "</b>");
   }
 
-  updateMinMaxZoomLevel();
 }
