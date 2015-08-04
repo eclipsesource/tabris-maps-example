@@ -2,7 +2,7 @@ exports.create = function() {
   return tabris.create("Page", {
     title: "property: center",
     topLevel: true
-  }).on("appear", createExample);
+  }).once("appear", createExample);
 };
 
 function createExample(page) {
@@ -18,7 +18,7 @@ function createExample(page) {
   }).appendTo(page);
 
   var blacktown = tabris.create("Button", {
-    text: "Go to Blacktown",
+    text: "Go to Blacktown"
   }).on("select", function() {
     map.set("center", [-33.769, 150.907]);
     map.set("zoom", 14);

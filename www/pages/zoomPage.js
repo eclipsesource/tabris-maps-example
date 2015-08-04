@@ -5,7 +5,7 @@ exports.create = function() {
   return tabris.create("Page", {
     title: "property: zoom",
     topLevel: true
-  }).on("appear", createExample);
+  }).once("appear", createExample);
 };
 
 function createExample(page) {

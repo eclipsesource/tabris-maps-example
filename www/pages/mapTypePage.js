@@ -2,7 +2,7 @@ exports.create = function() {
   return tabris.create("Page", {
     title: "property: mapType",
     topLevel: true
-  }).on("appear", createExample);
+  }).once("appear", createExample);
 };
 
 function createExample(page) {
