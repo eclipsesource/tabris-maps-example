@@ -25,7 +25,7 @@ tabris.registerWidget("Map", {
       "zoom": zoom
     });
   },
-  animateCamera: function(northWestLatLng, southEastLatLng) {
+  animateCameraWithBounds: function(northWestLatLng, southEastLatLng) {
     // TODO check types
     this._nativeCall("animateCamera", {
       "northWestLatLng": northWestLatLng,
