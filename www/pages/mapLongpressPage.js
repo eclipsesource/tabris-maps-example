@@ -1,18 +1,8 @@
 exports.create = function() {
-
-  var page = tabris.create("Page", {
+  return tabris.create("Page", {
     title: "event: mapLongpress",
     topLevel: true
-  });
-
-  tabris.create("Button", {
-    text: "Create Example",
-    layoutData: {centerX: 0, centerY: 0}
-  }).on("select", function() {
-    createExample(page);
-    this.set("visible", false);
-  }).appendTo(page);
-
+  }).on("appear", createExample);
 };
 
 function createExample(page) {

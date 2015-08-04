@@ -2,22 +2,10 @@ var MIN_ZOOM_VALUE = 2;
 var MAX_ZOOM_VALUE = 21;
 
 exports.create = function() {
-
-  var page = tabris.create("Page", {
+  return tabris.create("Page", {
     title: "property: zoom",
     topLevel: true
-  });
-
-  tabris.create("Button", {
-    text: "Create Example",
-    layoutData: {centerX: 0, centerY: 0}
-  }).on("select", function() {
-    createExample(page);
-    this.set("visible", false);
-  }).appendTo(page);
-
-  return page;
-
+  }).on("appear", createExample);
 };
 
 function createExample(page) {
