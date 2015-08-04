@@ -25,11 +25,17 @@ tabris.registerWidget("Map", {
       "zoom": zoom
     });
   },
-  animateCameraWithBounds: function(northWestLatLng, southEastLatLng) {
+  animateCameraToBounds: function(northWestLatLng, southEastLatLng) {
     // TODO check types
-    this._nativeCall("animateCamera", {
+    this._nativeCall("animateCameraToBounds", {
       "northWestLatLng": northWestLatLng,
       "southEastLatLng": southEastLatLng
+    });
+  },
+  animateCameraToPointGroup: function(latLngPointGroup) {
+    // TODO check types
+    this._nativeCall("animateCameraToPointGroup", {
+      "latLngPointGroup": latLngPointGroup
     });
   },
   getMinZoomLevel: function() {
