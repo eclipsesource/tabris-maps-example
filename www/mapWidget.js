@@ -18,6 +18,18 @@ tabris.registerWidget("Map", {
     zoom: "float",
     mapType: {type: ["choice", ["none", "hybrid", "normal", "satellite", "terrain"]]}
   },
+  addMarker: function(index, latLng) {
+    // TODO check types
+    this._nativeCall("addMarker", {
+      index: index,
+      latLng: latLng
+    });
+  },
+  removeMarker: function(marker) {
+    this._nativeCall("removeMarker", {
+      marker: marker
+    });
+  },
   animateCamera: function(centerLatLng, zoom) {
     // TODO check types
     this._nativeCall("animateCamera", {
