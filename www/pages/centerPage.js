@@ -6,7 +6,7 @@ exports.create = function() {
 };
 
 function createExample(page) {
-  var map = tabris.create("Map", {
+  var map = tabris.create("ESMap", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("mapready", function() {
     this.set("center", [-33.867, 151.206]);
