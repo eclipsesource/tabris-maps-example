@@ -11,7 +11,7 @@ exports.create = function() {
 function createExample(page) {
   var map = tabris.create("Map", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
-  }).on("mapReady", function() {
+  }).on("mapready", function() {
 
     this.set("center", [-33.867, 151.206]);
 
