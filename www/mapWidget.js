@@ -10,6 +10,9 @@ tabris.registerWidget("Map", {
     },
     mapready: {
       trigger: function() {this.trigger("mapready", this);}
+    },
+    mappan: {
+      trigger: function(event) {this.trigger("mappan", this, event.latLng);}
     }
   },
   _properties: {
