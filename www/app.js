@@ -1,4 +1,3 @@
-require("./mapWidget.js");
 var centerPage = require("./pages/centerPage");
 var mapTypePage = require("./pages/mapTypePage");
 var zoomPage = require("./pages/zoomPage");
