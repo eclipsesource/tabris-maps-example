@@ -8,9 +8,9 @@ exports.create = function() {
 function createExample(page) {
   var map = tabris.create("ESMap", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
-  }).on("mapready", function() {
+  }).on("ready", function() {
     this.set("center", [-33.867, 151.206]);
-    this.on("maptap", function(widget, latLng) {
+    this.on("tap", function(widget, latLng) {
       var text = "Map tap position:<br/>" +
         "Latitude: <b>" + latLng[0] + "</b><br/>" +
         "Longitude: <b>" + latLng[1] + "</b>";
