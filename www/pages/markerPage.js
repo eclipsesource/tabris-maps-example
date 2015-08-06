@@ -10,7 +10,7 @@ function createExample(page) {
   var markersCount = 0;
   var markerIds = [];
 
-  var map = tabris.create("Map", {
+  var map = tabris.create("ESMap", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("ready", mapReady).appendTo(page);
 
