@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="com.eclipsesource.tabris.maps.example" android-versionCode="1" id="com.eclipsesource.tabris.maps.example" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-packageName="com.eclipsesource.tabris.maps.example" android-versionCode="1" id="com.eclipsesource.tabris.maps.example" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
     <name>TabrisMapsExample</name>
     <description>
         Example for the Tabris maps custom widget.
     </description>
-    <author>
+    <author email="tabris@eclipsesource.com" href="https://tabrisjs.com">
         EclipseSource
     </author>
-    <access origin="*" />
     <preference name="EnableDeveloperConsole" value="true" />
-    <plugin name="com.eclipsesource.tabris.maps" spec="../tabris-maps">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDJ4DJciLzPdpZnJH6CeGoduaKhzfPN-1I" />
+    <plugin name="com.eclipsesource.tabris.maps" spec="https://github.com/eclipsesource/tabris-maps.git">
+        <variable name="API_KEY_FOR_ANDROID" value="Build hook will insert API key from environment variable API_KEY_FOR_ANDROID." />
     </plugin>
+    <hook src="hooks/api_key_hook.js" type="before_platform_add" />
 </widget>
