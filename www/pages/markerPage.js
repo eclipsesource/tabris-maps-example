@@ -32,9 +32,10 @@ function createExample(page) {
   }
 
   function removeMarker() {
-    this.dispose();
     var markerId = markerIds.indexOf(this.get("id"));
-    if (markerId) {
+    console.log("marker tapped: " + markerId);
+    this.dispose();
+    if (markerId >= 0) {
       markerIds.splice(markerId, 1);
     }
     updateMarkerIdsTextView();
