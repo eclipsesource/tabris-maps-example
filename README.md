@@ -4,7 +4,7 @@ This is an example [Tabris.js](https://tabrisjs.com) project to demonstrate how 
 ## Running the example
 
 ### iOS instructions
-1. Maps plugin is written in Swift while Cordova is written in Objective-C. Therefore you need a bridging header between those two languages. If your proejct already has bridging header you can skip steps 2-9.
+1. Maps plugin is written in Swift while Cordova is written in Objective-C. Therefore you need a bridging header between those two languages. If your project already has a bridging header you can skip steps 2-9.
 1. Open your Xcode project and go to `Plugins` group in Project navigator.
 1. Go to `File -> New -> File` and then select `Header file` from `iOS -> Sources group`.
 1. Bridging header has to have your projects name as a prefix and "-Bridging-Header" as suffix. Eg. `MY_PROJECT_NAME-Bridging-Header.h`.
@@ -54,7 +54,7 @@ E/Google Maps Android API(16793):   Android Application (<cert_fingerprint>;<pac
 ```
 Then use the SHA1 from that output (marked with ```YYY-SHA1-HERE-YYY``` above) with your maps API key in the Google developer console. Update the API key you use in the debug build. Do not generate a new one. Be aware, that the build service will generate a new debug key for every build in debug mode and that propagation of the newly associated SHA1 takes some minutes.
 
-### Locally for Android 
+### Locally for Android
 1. Clone the repository.
 1. Make sure your Android debug certificate's fingerprint is registered with the API key you will use for Google Maps on Google Developers Console/API & auth/Credentials (https://console.developers.google.com/project/[YOUR_PROJECT_NAME]/apiui/credential)
 1. Download the latest Android Cordova platform from https://tabrisjs.com/download
@@ -65,7 +65,7 @@ cordova platform add [LOCATION_TO_THE_CORDOVA_PLATFORM]
 cordova run
 ```
 
-### Locally for iOS 
+### Locally for iOS
 1. Clone the repository.
 1. Download latest iOS Cordova platform from https://tabrisjs.com/download and add it to your project (`cordova platform add [LOCATION_TO_THE_CORDOVA_PLATFORM]`)
 1. Follow steps in `iOS intructions` section of this file
