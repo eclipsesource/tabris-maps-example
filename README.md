@@ -3,33 +3,6 @@ This is an example [Tabris.js](https://tabrisjs.com) project to demonstrate how 
 
 ## Running the example
 
-### iOS instructions
-1. Maps plugin is written in Swift while Cordova is written in Objective-C. Therefore you need a bridging header between those two languages. If your project already has a bridging header you can skip steps 2-9.
-1. Open your Xcode project and go to `Plugins` group in Project navigator.
-1. Go to `File -> New -> File` and then select `Header file` from `iOS -> Sources group`.
-1. Bridging header has to have your projects name as a prefix and "-Bridging-Header" as suffix. Eg. `MY_PROJECT_NAME-Bridging-Header.h`.
-1. Remove contents of header.
-1. Open Xcode project and go to `Build settings` and search for `Defines Module` under `Packaging` section and `Enable Modules (C and Objective-C)` under `Apple LLVM 7.0 - Language - Modules` section and set them both to `Yes`.
-1. Also in `Build Settings` search for `Objective-C Bridging Header` under `Swift Compiler - Code Generation` and provide following path `MY_PROJECT_NAME/Plugins/MY_PROJECT_NAME-Bridging-Header.h`. **ATTENTION:** If your bridging header is in a different path please provide a path relative to `MY_PROJECT_NAME.xcodeproj`.
-1. Go to `AppDelegate.m` file and add following line `#import "MY_PROJECT_NAME-Swift.h"` just after last `#import` statement.
-1. In the same file search for `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method and add lines `[self.client addRemoteObject:[ESMap class]];` and `[self.client addRemoteObject:[ESMarker class]];` just before `self.client.delegate = self;` statement.
-1. Add following lines to bridging header and save changes:
-```
-#import "AppDelegate.h"
-#import <Tabris/BasicObject.h>
-#import <Tabris/BasicWidget.h>
-#import <Tabris/ClientLayout.h>
-#import <Tabris/DelegatingView.h>
-#import <Tabris/JSBinding.h>
-#import <Tabris/Message.h>
-#import <Tabris/Notifications.h>
-#import <Tabris/NotificationsProtocols.h>
-#import <Tabris/RemoteObject.h>
-#import <Tabris/TabrisClient.h>
-#import <Tabris/TabrisClientDelegates.h>
-#import <Tabris/TabrisHTTPClient.h>
-```
-
 ### Using the online build service
 **ATTENTION:** iOS does not require any API keys to work
 
@@ -68,7 +41,6 @@ cordova run
 ### Locally for iOS
 1. Clone the repository.
 1. Download latest iOS Cordova platform from https://tabrisjs.com/download and add it to your project (`cordova platform add [LOCATION_TO_THE_CORDOVA_PLATFORM]`)
-1. Follow steps in `iOS intructions` section of this file
 1. Execute `cordova run`
 
 ## Screenshots
