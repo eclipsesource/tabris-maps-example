@@ -9,6 +9,7 @@ function createExample(page) {
 
   var markersCount = 0;
   var markerIds = [];
+  var colors = ["azure", "cyan", "blue", "green", "magenta", "orange", "red", "rose", "violet", "yellow"];
 
   var map = tabris.create("ESMap", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
@@ -24,8 +25,11 @@ function createExample(page) {
     this.set("center", [-33.867, 151.206]);
     this.on("tap", function(widget, latLng) {
       var marker = this.createMarker({latLng: latLng});
-      marker.set("id", ++markersCount);
-      markerIds.push(marker.get("id"));
+      var markerId = ++markersCount;
+      marker.set("id", markerId);
+      var markerColor = colors[markerId % colors.length];
+      marker.set("color", markerColor);
+      markerIds.push(markerId);
       updateMarkerIdsTextView();
       marker.on("tap", removeMarker);
     });
