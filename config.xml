@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="com.eclipsesource.tabris.maps.example" android-versionCode="2" id="com.eclipsesource.tabris.maps.example" version="0.1.0" xmlns="http://www.w3.org/ns/widgets">
+<widget android-packageName="com.eclipsesource.tabris.maps.example" android-versionCode="2" id="com.eclipsesource.tabris.maps.example" version="0.2.0" xmlns="http://www.w3.org/ns/widgets">
     <name>TabrisMapsExample</name>
     <description>
         Example for the Tabris maps custom widget.
