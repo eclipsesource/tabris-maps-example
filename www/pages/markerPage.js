@@ -16,8 +16,8 @@ function createExample(page) {
   }).on("ready", mapReady).appendTo(page);
 
   var markerIdsTextView = tabris.create("TextView", {
-    markupEnabled: true,
     layoutData: {left: 10, top: [map, 10], right: 10},
+    markupEnabled: true,
     text: "Active marker ids: <b>?</b>"
   }).appendTo(page);
 
@@ -36,11 +36,12 @@ function createExample(page) {
   }
 
   function removeMarker() {
-    var markerId = markerIds.indexOf(this.get("id"));
-    console.log("marker tapped: " + markerId);
+    var markerId = this.get("id");
+    var markerIdIndex = markerIds.indexOf(Number(markerId));
     this.dispose();
-    if (markerId >= 0) {
-      markerIds.splice(markerId, 1);
+    console.log("marker tapped: " + markerId + " and disposed");
+    if (markerIdIndex >= 0) {
+      markerIds.splice(markerIdIndex, 1);
     }
     updateMarkerIdsTextView();
   }
