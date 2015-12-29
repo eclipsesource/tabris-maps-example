@@ -19,7 +19,7 @@ function createExample(page) {
   }).appendTo(page);
 
   var tapEventDisplay = tabris.create("TextView", {
-    markupEnabled: true,
-    layoutData: {left: 10, top: [map, 10], right: 10}
+    layoutData: {left: 10, top: [map, 10], right: 10},
+    markupEnabled: true
   }).appendTo(page);
 }
