@@ -9,7 +9,7 @@ function createExample(page) {
   var map = tabris.create("ESMap", {
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("ready", function() {
-    this.set("center", [-33.867, 151.206]);
+    this.set("position", [-33.867, 151.206]);
     this.set("zoom", 13);
   }).appendTo(page);
 

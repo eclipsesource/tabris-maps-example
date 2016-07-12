@@ -22,7 +22,7 @@ function createExample(page) {
   }).appendTo(page);
 
   function mapReady() {
-    this.set("center", [-33.867, 151.206]);
+    this.set("position", [-33.867, 151.206]);
     this.on("tap", function(widget, latLng) {
       var marker = this.createMarker({latLng: latLng});
       var markerId = ++markersCount;
