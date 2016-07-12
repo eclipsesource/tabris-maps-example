@@ -1,4 +1,4 @@
-var centerPage = require("./pages/centerPage");
+var positionPage = require("./pages/positionPage");
 var mapTypePage = require("./pages/mapTypePage");
 var zoomPage = require("./pages/zoomPage");
 var regionPage = require("./pages/regionPage");
@@ -9,7 +9,7 @@ var markerPage = require("./pages/markerPage");
 var drawer = tabris.create("Drawer");
 
 tabris.create("PageSelector").appendTo(drawer);
-centerPage.create().open();
+positionPage.create().open();
 mapTypePage.create();
 zoomPage.create();
 regionPage.create();
