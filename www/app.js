@@ -1,4 +1,5 @@
 var positionPage = require("./pages/positionPage");
+var cameraPage = require("./pages/cameraPage");
 var mapTypePage = require("./pages/mapTypePage");
 var zoomPage = require("./pages/zoomPage");
 var regionPage = require("./pages/regionPage");
@@ -10,6 +11,7 @@ var drawer = tabris.create("Drawer");
 
 tabris.create("PageSelector").appendTo(drawer);
 positionPage.create().open();
+cameraPage.create();
 mapTypePage.create();
 zoomPage.create();
 regionPage.create();
