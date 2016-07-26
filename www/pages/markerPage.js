@@ -11,7 +11,7 @@ function createExample(page) {
   var markerIds = [];
   var colors = ["azure", "cyan", "blue", "green", "magenta", "orange", "red", "rose", "violet", "yellow"];
 
-  var map = tabris.create("ESMap", {
+  var map = new eclipsesource.maps.Map({
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("ready", mapReady).appendTo(page);
 

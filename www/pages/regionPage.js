@@ -6,7 +6,7 @@ exports.create = function() {
 };
 
 function createExample(page) {
-  var map = tabris.create("ESMap", {
+  var map = new eclipsesource.maps.Map({
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("ready", function() {
   }).appendTo(page);
@@ -19,12 +19,12 @@ function createExample(page) {
     text: "Go to Sydney",
     layoutData: {centerX: 0, top: 0}
   }).on("select", function() {
-    map.set("region", [-33.867, 151.206, 0.025, 0.025]);
+    map.set("region", {northEast: [-33.853, 151.232], southWest: [-33.893, 151.182]});
     var region = map.get("region");
-    centerPosition.set("text", "Latitude: <b>" + region[0] + "</b><br/>" +
-      "Longitude: <b>" + region[1] + "</b><br/>" +
-      "Latitude delta: <b>" + region[2] + "</b><br/>" +
-      "Longitude delta: <b>" + region[3] + "</b>");
+    centerPosition.set("text", "North east latitude: <b>" + region.northEast[0] + "</b><br/>" +
+      "North east longitude: <b>" + region.northEast[1] + "</b><br/>" +
+      "South west Latitude: <b>" + region.southWest[0] + "</b><br/>" +
+      "South west longitude: <b>" + region.southWest[1] + "</b>");
   }).appendTo(locationButtons);
 
   var centerPosition = tabris.create("TextView", {

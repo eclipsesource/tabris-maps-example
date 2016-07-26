@@ -11,7 +11,7 @@ Visit our documentation to learn more about [Building a Tabris.js App](https://t
 ### Using the online build service
 1. Fork the repository of tabris-maps-example (alternatively you can create your own project using the tabris-maps plugin).
 1. Create a Tabris.js app on https://tabrisjs.com/[YOUR_USER]/apps/ with your GitHub fork (or own GitHub project).
-1. Add an environment variable `API_KEY_FOR_ANDROID` with your [Google Maps API key](https://developers.google.com/maps/documentation/android-api/signup) as a value on the settings tab of your app.  
+1. Add an environment variable `ANDROID_API_KEY` with your [Google Maps API key](https://developers.google.com/maps/documentation/android-api/signup) as a value on the settings tab of your app.
  **ATTENTION:** iOS does not require any API keys to work.
 1. On Android select the _signing key_ for the app whose fingerprint was registered on the Google Developers Console. On iOS just choose the _signing key_ that fits your device and app.
 1. Trigger a build.
@@ -36,7 +36,7 @@ Then use the SHA1 from that output (marked with ```YYY-SHA1-HERE-YYY``` above) w
 1. Download the latest Android Cordova platform from https://tabrisjs.com/download
 1. Execute the following:
 ```sh
-export API_KEY_FOR_ANDROID=[YOUR_GOOGLE_MAPS_API_KEY]
+export ANDROID_API_KEY=[YOUR_GOOGLE_MAPS_API_KEY]
 cordova platform add [LOCATION_TO_THE_CORDOVA_PLATFORM]
 cordova run
 ```

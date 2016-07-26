@@ -6,7 +6,7 @@ exports.create = function() {
 };
 
 function createExample(page) {
-  var map = tabris.create("ESMap", {
+  var map = new eclipsesource.maps.Map({
     layoutData: {left: 0, right: 0, top: 0, height: 200}
   }).on("ready", function() {
     this.set("position", [-33.867, 151.206]);
