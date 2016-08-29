@@ -1,3 +1,10 @@
+# DEPRECATED
+
+With the release of tabris-maps 2.0.0 the examples have been integrated into the tabris-maps project.
+
+https://github.com/eclipsesource/tabris-maps/tree/master/example
+
+
 # tabris-maps-example
 This is an example [Tabris.js](https://tabrisjs.com) project that demonstrates how to use features of the  [tabris-maps](https://github.com/eclipsesource/tabris-maps) custom widget.
 It consist of a native app for iOS and Android mobile devices.
